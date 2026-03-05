@@ -75,7 +75,7 @@ Now, modify **DK/.AL-Go/settings.json** and **US/.AL-Go/settings.json** by addin
   ]
 ```
 
-Specifying a **"."** in **repo**, means to search in the same repository for the depdency. **Release_status** **include** means that AL-Go will include the actual source from the dependent project instead of downloading just a specific build. **Stage** the changes, **Commit** them, and **Sync**.
+Specifying a **"."** in **repo**, means to search in the same repository for the dependency. **Release_status** **include** means that AL-Go will include the actual source from the dependent project instead of downloading just a specific build. **Stage** the changes, **Commit** them, and **Sync**.
 
 | ![image](https://github.com/microsoft/AL-Go/assets/10775043/8d70b96d-2b6f-4cf0-80cc-a34dfdede60b) |
 |-|

@@ -10,7 +10,7 @@
 
    ![Releases](https://github.com/user-attachments/assets/71de15de-1d29-49cf-a593-85b0c5041f4c)
 
-1. Choose the release (v1.0) and you will see the release. The release notes are pulled from all changes checked in since the last release. The auto-generated release note also contains a list of the new contributers and a link to the full changelog. Choose the **Edit** button (the pencil) to modify the release notes. At the bottom, you can see the artifacts published, both the apps and the source code. A tag is created in the repository for the release number to always keep this.
+1. Choose the release (v1.0) and you will see the release. The release notes are pulled from all changes checked in since the last release. The auto-generated release note also contains a list of the new contributors and a link to the full changelog. Choose the **Edit** button (the pencil) to modify the release notes. At the bottom, you can see the artifacts published, both the apps and the source code. A tag is created in the repository for the release number to always keep this.
 
    ![Release](https://github.com/user-attachments/assets/ad9088c7-dfad-4a5e-9a20-c168b1311eee)
 

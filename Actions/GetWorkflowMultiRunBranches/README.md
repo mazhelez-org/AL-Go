@@ -1,7 +1,7 @@
 # Get Workflow Multi-Run Branches
 
 Gets the branches for a multi-branch workflow run.
-If the worflow is dispatched, the branches are determined based on the input `includeBranches`.
+If the workflow is dispatched, the branches are determined based on the input `includeBranches`.
 If the workflow is run on a schedule, the branches are determined based on the `workflowSchedule.includeBranches` setting.
 
 ## INPUT

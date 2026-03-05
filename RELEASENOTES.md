@@ -276,7 +276,7 @@ Now AL-Go telemetry also logs `ActionDuration` which makes it possible to track 
 - Issue 1678 Test summary is showing too many status icons
 - Issue 1640 AL1040 error due to app folder within the artifacts cache being incorrectly recognized as an app folder
 - Issue 1630 Error when downloading a release, when the destination folder already exists.
-- Issue 1540 and 1649 Apps with dependencies to Microsft\_\_EXCLUDE\_ apps fails deployment
+- Issue 1540 and 1649 Apps with dependencies to Microsoft\_\_EXCLUDE\_ apps fails deployment
 - Issue 1547 Dependencies will be installed even if DependencyInstallMode is ignore, but dependencies will never be installed on production environments
 - Issue 1654 GithubPackageContext does not work together with private trustedNuGetFeeds
 - Issue 1627 AL-Go should throw an error or a warning if you create a release, which is older than the latest release
@@ -333,7 +333,7 @@ All apps, which were not built by the PR build will be deployed from the last kn
 ### New Workflow specific settings
 
 - `workflowSchedule` - can be structure with a property named `cron`, which must be a valid crontab, defining the CRON schedule for when the specified workflow should run. Default is no scheduled runs, only manual triggers. Build your crontab string here: [https://crontab.guru](https://crontab.guru). You need to run the Update AL-Go System Files workflow for the schedule to take effect.<br/>**Note:** If you configure a WorkflowSchedule for the CI/CD workflow, AL-Go will stop triggering CICDs on push unless you have also added CICDPushBranches to your settings.<br/>**Note also:** If you define a schedule for Update AL-Go System Files, it uses direct Commit instead of creating a PR.
-- `workflowConcurrency` - is used to control concurrency of workflows. Like with the `workflowSchedule` setting, this setting should be applied in workflow specific settings files or conditional settings. By default, all workflows allows for concurrency, except for the Create Release workflow. If you are using incremental builds in CI/CD it is also recommented to set WorkflowConcurrency to:<br/>`[ "group: ${{ github.workflow }}-${{ github.ref }}", "cancel-in-progress: true" ]`<br />in order to cancel prior incremental builds on the same branch.<br />Read more about workflow concurrency [here](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/control-the-concurrency-of-workflows-and-jobs).
+- `workflowConcurrency` - is used to control concurrency of workflows. Like with the `workflowSchedule` setting, this setting should be applied in workflow specific settings files or conditional settings. By default, all workflows allows for concurrency, except for the Create Release workflow. If you are using incremental builds in CI/CD it is also recommended to set WorkflowConcurrency to:<br/>`[ "group: ${{ github.workflow }}-${{ github.ref }}", "cancel-in-progress: true" ]`<br />in order to cancel prior incremental builds on the same branch.<br />Read more about workflow concurrency [here](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/control-the-concurrency-of-workflows-and-jobs).
 
 ### New Repository Settings
 
@@ -492,7 +492,7 @@ Previously, AL-Go required the GitHubRunner and GitHubRunnerShell settings to be
 - Issue 1105 Increment Version Number - repoVersion in .github/AL-Go-Settings.json is not updated
 - Issue 1073 Publish to AppSource - Automated validation: failure
 - Issue 980 Allow Scope to be PTE in continuousDeployment for PTE extensions in Sandbox (enhancement request)
-- Issue 1079 AppSource App deployment failes with PerTenantExtensionCop Error PTE0001 and PTE0002
+- Issue 1079 AppSource App deployment fails with PerTenantExtensionCop Error PTE0001 and PTE0002
 - Issue 866 Accessing GitHub Environment Variables in DeployToCustom Scenarios for PowerShell Scripts
 - Issue 1083 SyncMode for custom deployments?
 - Issue 1109 Why filter deployment settings?
@@ -538,7 +538,7 @@ AL-Go for GitHub now includes a new telemetry module. For detailed information o
   - **NumberOfSqlStmtsError** - an error is issued if the number of SQL statements from a bcpt test increases more than this percentage (default 10)
 
 > [!NOTE]
-> Duration thresholds are subject to varying results depending on the performance of the agent running the tests. Number of SQL statements executed by a test is often the most reliable indicator of performance degredation.
+> Duration thresholds are subject to varying results depending on the performance of the agent running the tests. Number of SQL statements executed by a test is often the most reliable indicator of performance degradation.
 
 ## v5.2
 
@@ -887,7 +887,7 @@ Open Workflow details to get the device Code for authentication in the job summa
 
 ### Create Online Dev. Environment
 
-When running the **Create Online Dev. Environment** workflow without having the _adminCenterApiCredentials_ secret created, the workflow will intiate the deviceCode flow and allow you to authenticate to the Business Central Admin Center.
+When running the **Create Online Dev. Environment** workflow without having the _adminCenterApiCredentials_ secret created, the workflow will initiate the deviceCode flow and allow you to authenticate to the Business Central Admin Center.
 Open Workflow details to get the device Code for authentication in the job summary for the initialize job.
 
 ### Issues
@@ -966,7 +966,7 @@ ReadSettings has been refactored to allow organization wide settings to be added
 - Issue #319 Support for AssignPremiumPlan
 - Issue #328 Allow multiple projects in AppSource App repo
 - Issue #344 Deliver To AppSource on finding app.json for the app
-- Issue #345 LocalDevEnv.ps1 can't Dowload the file license file
+- Issue #345 LocalDevEnv.ps1 can't Download the file license file
 
 ### New Settings
 
@@ -1002,9 +1002,9 @@ Another set of end to end tests have also been added and in the documentation on
 
 ### LF, UTF8 and JSON
 
-GitHub natively uses LF as line seperator in source files.
+GitHub natively uses LF as line separator in source files.
 In earlier versions of AL-Go for GitHub, many scripts and actions would use CRLF and convert back and forth. Some files were written with UTF8 BOM (Byte Order Mark), other files without and JSON formatting was done using PowerShell 5.1 (which is different from PowerShell 7).
-In the latest version, we always use LF as line seperator, UTF8 without BOM and JSON files are written using PowerShell 7. If you have self-hosted runners, you need to ensure that PS7 is installed to make this work.
+In the latest version, we always use LF as line separator, UTF8 without BOM and JSON files are written using PowerShell 7. If you have self-hosted runners, you need to ensure that PS7 is installed to make this work.
 
 ### Experimental Support
 
@@ -1080,7 +1080,7 @@ Setting the repo setting "runs-on" to "Ubuntu-latest", followed by running Updat
 - New Repo setting: CICDPushBranches can be specified as an array of branches, which triggers a CI/CD workflow on commit. Default is main', release/\*, feature/\*
 - New Repo setting: CICDPullRequestBranches can be specified as an array of branches, which triggers a CI/CD workflow on pull request. Default is main
 - New Repo setting: CICDSchedule can specify a CRONTab on when you want to run CI/CD on a schedule. Note that this will disable Push and Pull Request triggers unless specified specifically using CICDPushBranches or CICDPullRequestBranches
-- New Repo setting: UpdateGitHubGoSystemFilesSchedule can specify a CRONTab on when you want to Update AL-Go System Files. Note that when running on a schedule, update AL-Go system files will perfom a direct commit and not create a pull request.
+- New Repo setting: UpdateGitHubGoSystemFilesSchedule can specify a CRONTab on when you want to Update AL-Go System Files. Note that when running on a schedule, update AL-Go system files will perform a direct commit and not create a pull request.
 - New project Setting: AppSourceContext should be a compressed json structure containing authContext for submitting to AppSource. The BcContainerHelperFunction New-ALGoAppSourceContext will help you create this structure.
 - New project Setting: AppSourceContinuousDelivery. Set this to true in enable continuous delivery for this project to AppSource. This requires AppSourceContext and AppSourceProductId to be set as well
 - New project Setting: AppSourceProductId should be set to the product Id of this project in AppSource
@@ -1147,7 +1147,7 @@ Setting the repo setting "runs-on" to "Ubuntu-latest", followed by running Updat
 
 ### Environments
 
-- Add suport for EnvironmentName redirection by adding an Environment Secret under the environment or a repo secret called \<environmentName>\_EnvironmentName with the actual environment name.
+- Add support for EnvironmentName redirection by adding an Environment Secret under the environment or a repo secret called \<environmentName>\_EnvironmentName with the actual environment name.
 - No default environment name on Publish To Environment
 - For multi-project repositories, you can specify an environment secret called Projects or a repo setting called \<environment>\_Projects, containing the projects you want to deploy to this environment.
 

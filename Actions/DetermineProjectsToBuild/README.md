@@ -15,7 +15,7 @@ none
 | Name | Required | Description | Default value |
 | :-- | :-: | :-- | :-- |
 | shell | | The shell (powershell or pwsh) in which the PowerShell script in this action should run | powershell |
-| maxBuildDepth | | Specifies the maximum build depth suppored by the workflow running the action | 0 |
+| maxBuildDepth | | Specifies the maximum build depth supported by the workflow running the action | 0 |
 
 ## OUTPUT
 

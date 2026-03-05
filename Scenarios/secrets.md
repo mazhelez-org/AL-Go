@@ -207,7 +207,7 @@ Example: `{"storageAccountName":"MyStorageName","sastoken":"sv=2022-11-02&ss=b&s
 
 ### storageAccountName/storageAccountKey
 
-Using storageAccount Name and Key is by far the most unsecure way of authenticating to an Azure Storage Account. If ever compromised, people can do anything with these credentials, until the storageAccount key is cycled.
+Using storageAccount Name and Key is by far the most insecure way of authenticating to an Azure Storage Account. If ever compromised, people can do anything with these credentials, until the storageAccount key is cycled.
 
 Example: `{"storageAccountName":"MyStorageName","storageAccountKey":"<storageAccountKey>","containerName":"{project}","blobName":"{version}/{project}-{type}.zip"} `
 
