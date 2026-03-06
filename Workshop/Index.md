@@ -11,7 +11,7 @@ This workshop shows you how to take advantage of the functionality, which is pro
 1. [Single-project vs. Multi-project](Projects.md) - What is the difference between a single-project and a multi-project repository?
 1. [Dependencies #1](Dependencies1.md) - Dependencies to another project in the same repo.
 1. [Dependencies #2](Dependencies2.md) - Dependencies to AL-Go projects in other repositories (GitHub Packages or appDependencyProbingPaths).
-1. [Continuous Delivery](ContinuousDelivery.md) - Setup AL-Go for GitHub to deliver your apps whereever you like.
+1. [Continuous Delivery](ContinuousDelivery.md) - Setup AL-Go for GitHub to deliver your apps wherever you like.
 1. [Continuous Deployment](ContinuousDeployment.md) - Setup AL-Go for GitHub to deploy your apps to a Business Central environment.
 1. [Publish to Production](PublishToProduction.md) - Publish your apps to a production environment securely.
 1. [Automated Tests](AutomatedTests.md) - Add automated testing to your project.

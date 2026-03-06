@@ -62,7 +62,7 @@ You might have noticed that there are two settings in the repository settings fi
 
 ## Additional info on build performance
 
-1. Running 6 CI/CD workflows simultanously, causes 1 workflow to wait as I only had 5 runners.
+1. Running 6 CI/CD workflows simultaneously, causes 1 workflow to wait as I only had 5 runners.
    ![Wait](https://github.com/microsoft/AL-Go/assets/10775043/c18e4c23-4337-4747-ba67-177940175414)
 1. Connecting to the runner VM and looking at utilization indicates that the VM is pretty busy and probably over-allocated when starting 5+ builds at the same time. Every build was ~50% slower than when running only 1 build.
    ![CPU](https://github.com/microsoft/AL-Go/assets/10775043/24fc97c0-2a70-4c24-a4e7-0193bf9df4a7)

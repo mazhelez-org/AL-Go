@@ -48,7 +48,7 @@ After running one of the code snippets above, you should now have the AuthContex
 
 Beside the AppSourceContext secret, you will need to add a `DeliverToAppSource` structure to your project settings file.
 
-If your repository contains multiple projects, every project can contain an AppSource offering. One AL-Go project can only hold one AppSource offering (one AppSource Product Id) + a number of library apps. If your library apps are only used by this AppSource offering, then it is totally fine to place them in the same project as the main app. If these library apps are used by multiple AppSource offerings (multiple main apps), the should be placed in seperate projects or repositories.
+If your repository contains multiple projects, every project can contain an AppSource offering. One AL-Go project can only hold one AppSource offering (one AppSource Product Id) + a number of library apps. If your library apps are only used by this AppSource offering, then it is totally fine to place them in the same project as the main app. If these library apps are used by multiple AppSource offerings (multiple main apps), they should be placed in separate projects or repositories.
 
 In your project configuration, you will need the AppSource Product Id (not your app id). You can find your AppSource Product Id in the address bar of the browser in partner center when looking at your AppSource offering
 

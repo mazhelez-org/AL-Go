@@ -9,7 +9,7 @@ These workflows can be run manually by simply selecting the workflow and clickin
 | ![image](https://github.com/microsoft/AL-Go/assets/10775043/7747d778-40f8-4d3e-9e26-02e3cf410834) |
 |-|
 
-Microsoft recommands running these workflows on a schedule to ensure that your app is ready for upcoming releases at all times and at the same time keeping compatibility with the versions you want to support.
+Microsoft recommends running these workflows on a schedule to ensure that your app is ready for upcoming releases at all times and at the same time keeping compatibility with the versions you want to support.
 
 Use **Bing Copilot Chat** and ask it to generate the crontab you want (ex. *Create a crontab which triggers every saturday at 2am*) or use **https://crontab.guru** to create a crontab for the schedule you want to run your workflows on. I have selected the following for some of my apps:
 

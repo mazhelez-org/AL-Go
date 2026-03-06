@@ -1,6 +1,6 @@
 # Continuous Delivery
 
-Continuous Delivery is where AL-Go delivers your apps to whereever you like.
+Continuous Delivery is where AL-Go delivers your apps to wherever you like.
 
 Currently, the following targets are supported:
 

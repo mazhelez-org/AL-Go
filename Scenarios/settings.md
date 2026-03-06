@@ -143,7 +143,7 @@ The following settings are only allowed in workflow specific settings files or i
 | Name | Description |
 | :-- | :-- |
 | <a id="workflowSchedule"></a>workflowSchedule | The value should be a structure with a property named `cron`, containing a valid crontab, which is the CRON schedule for when the specified workflow should run. Default is no scheduled runs, only manual triggers. Build your crontab string here: [https://crontab.guru](https://crontab.guru). You need to run the Update AL-Go System Files workflow for the schedule to take effect.<br/> The structure can also contain `includeBranches`, an array of branches to support when running the workflow on multiple branches. Currently, only "Update AL-Go System Files" is supported to run on multiple branches. **Note:** If you configure a WorkflowSchedule for the CI/CD workflow, AL-Go will stop triggering CICDs on push unless you have also added CICDPushBranches to your settings.<br/>**Note also:** If you define a schedule for Update AL-Go System Files, it uses direct Commit instead of creating a PR. |
-| <a id="workflowConcurrency"></a>workflowConcurrency | A setting to control concurrency of workflows. Like with the `WorkflowSchedule` setting, this setting should be applied in workflow specific settings files or conditional settings. By default, all workflows allows for concurrency, except for the Create Release workflow. If you are using incremental builds in CI/CD it is also recommented to set WorkflowConcurrency to:<br/>`[ "group: ${{ github.workflow }}-${{ github.ref }}", "cancel-in-progress: true" ]`<br />in order to cancel prior incremental builds on the same branch.<br />Read more about workflow concurrency [here](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/control-the-concurrency-of-workflows-and-jobs).
+| <a id="workflowConcurrency"></a>workflowConcurrency | A setting to control concurrency of workflows. Like with the `WorkflowSchedule` setting, this setting should be applied in workflow specific settings files or conditional settings. By default, all workflows allows for concurrency, except for the Create Release workflow. If you are using incremental builds in CI/CD it is also recommended to set WorkflowConcurrency to:<br/>`[ "group: ${{ github.workflow }}-${{ github.ref }}", "cancel-in-progress: true" ]`<br />in order to cancel prior incremental builds on the same branch.<br />Read more about workflow concurrency [here](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/control-the-concurrency-of-workflows-and-jobs).
 
 ## AppSource specific advanced settings
 
@@ -345,7 +345,7 @@ Here are the parameters to use in your custom script:
 
 | Parameter | Description | Example |
 | --------- | :--- | :--- |
-| `$parametes.project` | The current AL-Go project | Root/AllProjects/MyProject |
+| `$parameters.project` | The current AL-Go project | Root/AllProjects/MyProject |
 | `$parameters.projectsName` | The name of the current AL-Go project | Root_AllProjects_MyProject |
 | `$parameters.type` | Type of delivery (CD or Release) | CD |
 | `$parameters.appsFolder` | The folder that contains the build artifacts from the default build of the non-test apps in the AL-Go project | AllProjects_MyProject-main-Apps-1.0.0.0 |
@@ -451,8 +451,8 @@ Note that changes to AL-Go for GitHub or Run-AlPipeline functionality in the fut
 
 | Setting | Description | Default |
 | :-- | :-- | :-- |
-| baseUrl | The Base Url for the online Business Central Web Client. This should be changed when targetting embed apps. | [https://businesscentral.dynamics.com](https://businesscentral.dynamics.com) |
-| apiBaseUrl | The Base Url for the online Business Central API endpoint. This should be changed when targetting embed apps. | [https://api.businesscentral.dynamics.com](https://api.businesscentral.dynamics.com) |
+| baseUrl | The Base Url for the online Business Central Web Client. This should be changed when targeting embed apps. | [https://businesscentral.dynamics.com](https://businesscentral.dynamics.com) |
+| apiBaseUrl | The Base Url for the online Business Central API endpoint. This should be changed when targeting embed apps. | [https://api.businesscentral.dynamics.com](https://api.businesscentral.dynamics.com) |
 | PartnerTelemetryConnectionString | The Telemetry Connection String for partner telemetry for DevOps telemetry. | |
 | SendExtendedTelemetryToMicrosoft | Set this value to true if you agree to emit extended DevOps telemetry to Microsoft. | false |
 | ObjectIdForInternalUse | BcContainerHelper will use this Object ID for internal purposes. Change if the default Object ID is in use. | 88123 |
