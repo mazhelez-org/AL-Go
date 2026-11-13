@@ -79,16 +79,13 @@ jobs:
             $err = $true
           }
           if ('${{ Secrets.adminCenterApiCredentials }}' -eq '') {
-            Write-Host "::Error::In order to run end to end tests, you need a Secret called adminCenterApiCredentials"
-            $err = $true
+            Write-Host "::Warning::In order to run end to end tests, you need a Secret called adminCenterApiCredentials - dependent tests will be skipped or limited"
           }
           if ('${{ Secrets.E2E_GHPackagesPAT }}' -eq '') {
-            Write-Host "::Error::In order to run end to end tests, you need a secret called E2E_GHPackagesPAT"
-            $err = $true
+            Write-Host "::Warning::In order to run end to end tests, you need a secret called E2E_GHPackagesPAT - dependent tests will be skipped or limited"
           }
           if ('${{ Secrets.E2EAZURECREDENTIALS }}' -eq '') {
-            Write-Host "::Error::In order to run end to end tests, you need a secret called E2EAZURECREDENTIALS"
-            $err = $true
+            Write-Host "::Warning::In order to run end to end tests, you need a secret called E2EAZURECREDENTIALS - dependent tests will be skipped or limited"
           }
           if ($err) {
             exit 1

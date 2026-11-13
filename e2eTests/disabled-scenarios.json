@@ -1,6 +1,10 @@
 [
-    {
-        "scenario": "FederatedCredentials",
-        "reason": "Azure resource migration work in progress"
-    }
+  {
+    "scenario": "FederatedCredentials",
+    "reason": "Azure resource migration work in progress"
+  },
+  {
+    "scenario": "GitHubPackages",
+    "reason": "E2E_GHPackagesPAT not configured in this fork"
+  }
 ]
